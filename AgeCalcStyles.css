@@ -1,0 +1,26 @@
+body{
+    background-color: black;
+}
+
+label{
+    font-size: xx-large;
+    font-family: consolas;
+    color: rgb(0, 200, 0)
+}
+
+input{
+    font-family: consolas;
+    font-size: xx-large;
+}
+
+
+p{
+    font-size: xx-large;
+    font-family: consolas;
+    color:rgb(0, 200, 0)
+}
+
+button{
+    font-family: consolas;
+    font-size: xx-large;
+}

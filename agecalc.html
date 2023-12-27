@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Age calculator</title>
+        <link rel="stylesheet" href="AgeCalcStyles.css">
+    </head>
+    <body>
+        <label id="l1">Enter your birth year: </label>
+        <input id = "B_Y"><br>
+        <label id="l2">Enter the year that should be found: </label>
+        <input id = "F_Y"><br>
+        <button type="button" id="button1">Find</button><br>
+        <p id = "para"></p>
+        <script>
+            document.getElementById("button1").onclick = function lulu(){
+                let current_year = Number(document.getElementById("B_Y").value);
+                let fin_year = Number(doucument.getElementById("F_Y").value);
+                let ans = current_year-fin_year;
+                let rans = "result: "+ans;
+                document.getElementById("para").innerHTML = rans;
+            }
+        </script>
+    </body>
+</html>
