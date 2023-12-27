@@ -1,0 +1,2 @@
+import MyProgram
+MyProgram.run()
