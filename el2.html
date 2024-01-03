@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel = "stylesheet" href = "s.css">
+</head>
+<body>
+    <div id = "Box">
+        <p style="font-size: xx-large;">I am colourful</p>
+    </div>    
+    <p>press "r" to change the background color to red</p>
+    <p>press "g" to change the background color to green</p>
+    <p>press "b" to change the background color to blue</p>
+    <p id = "ColourI"></p>
+    <script>
+        const Box = document.getElementById("Box");
+        const ci = document.getElementById("ColourI");
+        document.addEventListener("keydown", event =>{
+            if(event.key == "r"){
+                Box.style.backgroundColor = "red";
+                ci.innerHTML = "red";
+            }
+
+            if(event.key == "g"){
+                Box.style.backgroundColor = "green";
+                ci.innerHTML = "green";
+            }
+
+            if(event.key == "b"){
+                Box.style.backgroundColor = "blue";
+                ci.innerHTML = "blue";
+            }
+        })
+
+    </script>
+</body>
+</html>
