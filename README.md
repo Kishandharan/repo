@@ -14,10 +14,12 @@ Step 6: After clicking on "properties", copy the location and close the properti
 Step 7: Open command prompt and type "cd" and click space and paste the copied location and click enter.
 
 Step 8: 
+
 After clicking enter, In command prompt, type "pyinstaller" and click space and type "-F" and click space and type "-w" and click 
 space and type "-i" and click space and type the name of your 'ico' file(with extension) and click space and type the name of your
- python file(wih extension) and click enter, and wait until the the process is over.
+python file(wih extension) and click enter, and wait until the the process is over.
         
 Step 9: 
+
 After the process is over, open the folder(That we created on first step).in that folder, you will find a folder named dist.
 Open that folder and you will find a application. drag and drop it to he desktop and your appliaction is ready.
