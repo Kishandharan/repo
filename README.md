@@ -14,7 +14,6 @@
 ### Step 7: Open command prompt and type "cd" and click space and paste the copied location and click enter.
 
 ### Step 8: 
-
 ### After clicking enter, In command prompt, type "pyinstaller" and click space and type "-F" and click space and type "-w" and click 
 ### space and type "-i" and click space and type the name of your 'ico' file(with extension) and click space and type the name of your
 ### python file(wih extension) and click enter, and wait until the the process is over.
