@@ -1,4 +1,4 @@
-# .py to .exe procedure
+# python to executable converting procedure
 Step 1: Create a folder on the desktop to contain the app and the program.
 
 Step 2: Pick any Python Tkinter GUI program and move it to the folder that we created before.
