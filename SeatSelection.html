@@ -6,10 +6,36 @@
     <title>Theatre seat selection website</title>
 </head>
 <style>
+    :root{
+        --darkblue : #070360;
+    }
     div{text-align: center;}
-    body{background-color: #070360;}
-    h1,p,label{font-family:  "Bahnschrift Light"; color: white;}
-    button{font-family:  "Bahnschrift Light"; font-weight: bold;}
+    body{background-color: var(--darkblue);}
+    p,label{font-family:  "Bahnschrift Light"; color: white; font-weight: 900;}
+    h1{
+       font-family:  "Bahnschrift Light";
+       color: white; 
+       font-weight: 900;
+    }
+    button{
+        font-family:  "Bahnschrift Light";
+        font-weight: bold; 
+        font-size: large;
+    }
+    input{
+        font-family: "Bahnschrift Light";
+        font-weight: bold;
+        font-size: large;
+        text-align: center;
+    }
+    #screen{
+        text-decoration: overline 5px;
+    }
+    select,option{
+        font-family: "Bahnschrift Light";
+        font-weight: bold;
+        font-size: large;
+    }
 </style>
 <body>
     <div>
@@ -54,10 +80,16 @@
         <input type="checkbox" id="37">
         <input type="checkbox" id="38">
         <input type="checkbox" id="39">
-        <input type="checkbox" id="40"><br>    
-        <label>Cost per seat: </label><br>
-        <input type="text" id="Cost"><br>
-        <button id="getCost">Get cost</button>
+        <input type="checkbox" id="40"><br>
+        <p id="screen">Screen</p><br>
+        <input type="text" id="Cost" placeholder="Cost per seat"><br>
+        <select id="currency" style="width: 224px;">
+            <option disabled>Select currency</option>
+            <option value="Rupees">Rupees</option> 
+            <option value="Dollars">Dollars</option>
+            <option value="Euros">Euros</option>           
+        </select><br>
+        <button id="getCost" style="width: 224px;">Get cost</button>
         <p id="output"></p>
     </div>
     <script>
@@ -65,170 +97,173 @@ let gcbutton = document.getElementById("getCost");
 
 gcbutton.onclick = function(){
     let cost = Number(document.getElementById("Cost").value);
+    let currency = document.getElementById("currency").value;
     let totalCost = 0;
-let output = document.getElementById("output");
-let check1 = document.getElementById("1");
-let check2 = document.getElementById("2");
-let check3 = document.getElementById("3");
-let check4 = document.getElementById("4");
-let check5 = document.getElementById("5");
-let check6 = document.getElementById("6");
-let check7 = document.getElementById("7");
-let check8 = document.getElementById("8");
-let check9 = document.getElementById("9");
-let check10 = document.getElementById("10");
-let check11 = document.getElementById("11");
-let check12 = document.getElementById("12");
-let check13 = document.getElementById("13");
-let check14 = document.getElementById("14");
-let check15 = document.getElementById("15");
-let check16 = document.getElementById("16");
-let check17 = document.getElementById("17");
-let check18 = document.getElementById("18");
-let check19 = document.getElementById("19");
-let check20 = document.getElementById("20");
-let check21 = document.getElementById("21");
-let check22 = document.getElementById("22");
-let check23 = document.getElementById("23");
-let check24 = document.getElementById("24");
-let check25 = document.getElementById("25");
-let check26 = document.getElementById("26");
-let check27 = document.getElementById("27");
-let check28 = document.getElementById("28");
-let check29 = document.getElementById("29");
-let check30 = document.getElementById("30");
-let check31 = document.getElementById("31");
-let check32 = document.getElementById("32");
-let check33 = document.getElementById("33");
-let check34 = document.getElementById("34");
-let check35 = document.getElementById("35");
-let check36 = document.getElementById("36");
-let check37 = document.getElementById("37");
-let check38 = document.getElementById("38");
-let check39 = document.getElementById("39");
-let check40 = document.getElementById("40");
-    if(check1.checked){
-        totalCost += cost;
-    }
-    if(check2.checked){
-        totalCost += cost;
-    }
-    if(check3.checked){
-        totalCost += cost;
-    }
-    if(check4.checked){
-        totalCost += cost;
-    }
-    if(check5.checked){
-        totalCost += cost;
-    }
-    if(check6.checked){
-        totalCost += cost;
-    }
-    if(check7.checked){
-        totalCost += cost;
-    }
-    if(check8.checked){
-        totalCost += cost;
-    }
-    if(check9.checked){
-        totalCost += cost;
-    }
-    if(check10.checked){
-        totalCost += cost;
-    }
-    if(check11.checked){
-        totalCost += cost;
-    }
-    if(check12.checked){
-        totalCost += cost;
-    }
-    if(check13.checked){
-        totalCost += cost;
-    }
-    if(check14.checked){
-        totalCost += cost;
-    }
-    if(check15.checked){
-        totalCost += cost;
-    }
-    if(check16.checked){
-        totalCost += cost;
-    }
-    if(check17.checked){
-        totalCost += cost;
-    }
-    if(check18.checked){
-        totalCost += cost;
-    }
-    if(check19.checked){
-        totalCost += cost;
-    }
-    if(check20.checked){
-        totalCost += cost;
-    }
-    if(check21.checked){
-        totalCost += cost;
-    }
-    if(check22.checked){
-        totalCost += cost;
-    }
-    if(check23.checked){
-        totalCost += cost;
-    }
-    if(check24.checked){
-        totalCost += cost;
-    }
-    if(check25.checked){
-        totalCost += cost;
-    }
-    if(check26.checked){
-        totalCost += cost;
-    }
-    if(check27.checked){
-        totalCost += cost;
-    }
-    if(check28.checked){
-        totalCost += cost;
-    }
-    if(check29.checked){
-        totalCost += cost;
-    }
-    if(check30.checked){
-        totalCost += cost;
-    }
-    if(check31.checked){
-        totalCost += cost;
-    }
-    if(check32.checked){
-        totalCost += cost;
-    }
-    if(check33.checked){
-        totalCost += cost;
-    }
-    if(check34.checked){
-        totalCost += cost;
-    }
-    if(check35.checked){
-        totalCost += cost;
-    }
-    if(check36.checked){
-        totalCost += cost;
-    }
-    if(check37.checked){
-        totalCost += cost;
-    }
-    if(check38.checked){
-        totalCost += cost;
-    }
-    if(check39.checked){
-        totalCost += cost;
-    }
-    if(check40.checked){
-        totalCost += cost;
-    }
+    let output = document.getElementById("output");
+    let check1 = document.getElementById("1");
+    let check2 = document.getElementById("2");
+    let check3 = document.getElementById("3");
+    let check4 = document.getElementById("4");
+    let check5 = document.getElementById("5");
+    let check6 = document.getElementById("6");
+    let check7 = document.getElementById("7");
+    let check8 = document.getElementById("8");
+    let check9 = document.getElementById("9");
+    let check10 = document.getElementById("10");
+    let check11 = document.getElementById("11");
+    let check12 = document.getElementById("12");
+    let check13 = document.getElementById("13");
+    let check14 = document.getElementById("14");
+    let check15 = document.getElementById("15");
+    let check16 = document.getElementById("16");
+    let check17 = document.getElementById("17");
+    let check18 = document.getElementById("18");
+    let check19 = document.getElementById("19");
+    let check20 = document.getElementById("20");
+    let check21 = document.getElementById("21");
+    let check22 = document.getElementById("22");
+    let check23 = document.getElementById("23");
+    let check24 = document.getElementById("24");
+    let check25 = document.getElementById("25");
+    let check26 = document.getElementById("26");
+    let check27 = document.getElementById("27");
+    let check28 = document.getElementById("28");
+    let check29 = document.getElementById("29");
+    let check30 = document.getElementById("30");
+    let check31 = document.getElementById("31");
+    let check32 = document.getElementById("32");
+    let check33 = document.getElementById("33");
+    let check34 = document.getElementById("34");
+    let check35 = document.getElementById("35");
+    let check36 = document.getElementById("36");
+    let check37 = document.getElementById("37");
+    let check38 = document.getElementById("38");
+    let check39 = document.getElementById("39");
+    let check40 = document.getElementById("40");
+    if(!(isNaN(cost))){
+        if(check1.checked){
+            totalCost += cost;
+        }
+        if(check2.checked){
+            totalCost += cost;
+        }
+        if(check3.checked){
+            totalCost += cost;
+        }
+        if(check4.checked){
+            totalCost += cost;
+        }
+        if(check5.checked){
+            totalCost += cost;
+        }
+        if(check6.checked){
+            totalCost += cost;
+        }
+        if(check7.checked){
+            totalCost += cost;
+        }
+        if(check8.checked){
+            totalCost += cost;
+        }
+        if(check9.checked){
+            totalCost += cost;
+        }
+        if(check10.checked){
+            totalCost += cost;
+        }
+        if(check11.checked){
+            totalCost += cost;
+        }
+        if(check12.checked){
+            totalCost += cost;
+        }
+        if(check13.checked){
+            totalCost += cost;
+        }
+        if(check14.checked){
+            totalCost += cost;
+        }
+        if(check15.checked){
+            totalCost += cost;
+        }
+        if(check16.checked){
+            totalCost += cost;
+        }
+        if(check17.checked){
+            totalCost += cost;
+        }
+        if(check18.checked){
+            totalCost += cost;
+        }
+        if(check19.checked){
+            totalCost += cost;
+        }
+        if(check20.checked){
+            totalCost += cost;
+        }
+        if(check21.checked){
+            totalCost += cost;
+        }
+        if(check22.checked){
+            totalCost += cost;
+        }
+        if(check23.checked){
+            totalCost += cost;
+        }
+        if(check24.checked){
+            totalCost += cost;
+        }
+        if(check25.checked){
+            totalCost += cost;
+        }
+        if(check26.checked){
+            totalCost += cost;
+        }
+        if(check27.checked){
+            totalCost += cost;
+        }
+        if(check28.checked){
+            totalCost += cost;
+        }
+        if(check29.checked){
+            totalCost += cost;
+        }
+        if(check30.checked){
+            totalCost += cost;
+        }
+        if(check31.checked){
+            totalCost += cost;
+        }
+        if(check32.checked){
+            totalCost += cost;
+        }
+        if(check33.checked){
+            totalCost += cost;
+        }
+        if(check34.checked){
+            totalCost += cost;
+        }
+        if(check35.checked){
+            totalCost += cost;
+        }
+        if(check36.checked){
+            totalCost += cost;
+        }
+        if(check37.checked){
+            totalCost += cost;
+        }
+        if(check38.checked){
+            totalCost += cost;
+        }
+        if(check39.checked){
+            totalCost += cost;
+        }
+        if(check40.checked){
+            totalCost += cost;
+        }
 
-    output.innerHTML = `Total cost: ${totalCost}`
+        output.innerHTML = `Total cost: ${totalCost} ${currency}`;
+    }
 }
 
     </script>
