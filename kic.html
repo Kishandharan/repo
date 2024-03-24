@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>blabla</title>
+	</head>
+	<body>
+		<textarea id="id" cols="10" rows="10" placeholder="Enter text"></textarea>
+		<button id="id2" onclick="b()">Print</button>
+		<p id="p"></p>
+		<script>
+			function b(){
+				let id = document.getElementById("id");
+			let val = id.value;
+			let butt = document.getElementById("id2");
+				document.getElementById("p").innerHTML = val+"\r";
+			}
+		</script>
+	</body>
+</html>

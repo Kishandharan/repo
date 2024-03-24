@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id = "p"></p>
+    <button id = "button">push me</button>
+    <script>
+        let count = 0;
+        const p = document.getElementById("p");
+        const butt = document.getElementById("button");
+        document.addEventListener("keydown", event =>{
+        count+=1;
+        })
+        document.addEventListener("keyup", event =>{
+            count=count;
+        })
+        p.innerHTML = "score:"+count;
+        //}
+    </script>
+</body>
+</html>

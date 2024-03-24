@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Box moving animation</title>
+</head>
+<style>
+	.Box{
+		width: 100px;
+		height: 100px;
+		background-color: red;
+		border-radius: 10px;
+		position: relative;
+	}
+
+	.Box:hover{
+		animation: Move 2s infinite;
+	}
+
+	@keyframes Move{
+		0%{top:0px;}
+		25%{top:100px;}
+		50%{top:100px;}
+		75%{top:0px;}
+	}
+</style>
+<body>
+	<div class="Box">I am moving</div>
+</body>

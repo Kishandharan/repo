@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .div{
+        background-color: black;
+        width: 4.1rem;
+        height: 4.1rem;
+    }
+</style>
+<body>
+    <div id = "div"><p style="font-family: consolas; color: rgb(0, 200, 0);">MyBox</p></div>    
+    <script>
+        const myBox = document.getElementById("div");
+        document.addEventListener("keydown", event=>{
+                if(event.key == "r"){
+                myBox.style.textContent = "Courier new";  
+                
+                }
+        })
+    </script>
+</body>
+</html>

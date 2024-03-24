@@ -1,23 +1,68 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>TODO list</title>
+		<title>Todo list website</title>
 	</head>
 	<style>
-		.container{
+		.TodoContainer{
 			width: 50rem;
 			height: 25rem;
+			border: 2px solid black;
 			overflow: scroll;
-			border-bottom: 10px solid darkcyan;
-			border-top: 10px solid darkcyan;
+			border-radius: 8px;
+			padding-top: 0.0001px;
+			padding-left: 6px;
+			background-color: rgb(10, 230, 250);
+		}
+
+		#indicator{
+			font-family: Bahnschrift Light;
+			font-weight: bold;
+		}
+
+		#AddTaskButton{
+			font-family: Bahnschrift Light;
+			font-weight: bold;
+			background-color: rgb(10, 230, 250);
+			border-radius: 6px;
+		}
+
+		#Task{
+			font-family: Bahnschrift Light;
+			font-weight: bold;
+			border-radius: 6px;
+		}
+
+		.ics{
+			width: auto;
+			height: auto;
 		}
 	</style>
 	<body>
-		<div class="container" id="container">
-			<p>Tasks that you have created: </p>
+		<div class="TodoContainer" id="tc">
+			<p id="indicator">Tasks that you currently have:</p>
+			<div id="innerDiv" class="ics">
+				
+			</div>
 		</div>
-		<button id="CreateTask">Add new task</button>
+		<input id="Task" required>
+		<button id="AddTaskButton">Add task</button>
 
-		<script type="text/javascript" src="TODOfunctionality.js"></script>
+		<script>
+			let AddTaskButton = document.getElementById("AddTaskButton");
+			let tc = document.getElementById("tc");
+			AddTaskButton.onclick = function(){
+				let Task = document.getElementById("Task").value;
+				document.getElementById("innerDiv").innerHTML += `
+				<div id="di" style="font-family: Bahnschrift Light;font-weight: bold;"><br>
+				${Task} <button onclick = 'rem()' id="remove">remove task</button> 
+				<input type='checkbox'>
+				</div>`;
+			}
+
+			function rem(){
+				document.getElementById("innerDiv").removeChild(document.getElementById("innerDiv").children[0]);
+			}
+		</script>		
 	</body>
 </html>
