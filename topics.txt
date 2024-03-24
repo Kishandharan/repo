@@ -1,4 +1,4 @@
-Capitals, What is the capital of
-Currency, What is the currency of
-Sport, With which sport is this person associated with
-Film, Who is the hero in this film
+Capitals,What is the capital of
+Currency,What is the currency of
+Sport,With which sport is this person associated with
+Film,Who is the hero in this film
