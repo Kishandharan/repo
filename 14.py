@@ -1,2 +1,2 @@
-import com.mod
-com.mod.greet();
+import mod_Fileoperator
+mod_Fileoperator.afile("Hayday.txt", " appending")
